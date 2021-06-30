@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DepartmentsController;
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,14 @@ Route::post('/departments/save',[DepartmentsController::class ,"save"]);
 Route::get('/departments/delete/{id}',[DepartmentsController::class ,"delete"]);
 Route::get('/departments/edit/{id}',[DepartmentsController::class ,"edit"]);
 Route::post('/departments/update/{id}',[DepartmentsController::class ,"update"]);
+
+Route::get('/customers',[CustomerController::class ,"list"]);
+Route::get('/customers/add',[CustomerController::class ,"add"]);
+Route::post('/customers/save',[CustomerController::class ,"save"]);
+Route::get('/customers/delete/{id}',[CustomerController::class ,"delete"]);
+Route::get('/customers/edit/{id}',[CustomerController::class ,"edit"]);
+Route::post('/customers/update/{id}',[CustomerController::class ,"update"]);
+
 
 
 
