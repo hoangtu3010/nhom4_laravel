@@ -1,44 +1,59 @@
 @extends("layout")
 @section("main")
     <div class="content-wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-10">
-                    <h2 style="text-align: center;margin: 20px">Danh sách Nhân viên </h2>
+        <div class="container-header">
+            <section class="content-header">
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1>Departments</h1>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item active">List Department</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div><!-- /.container-fluid -->
+            </section>
+            <section class="content" style="margin-top: 20px">
+                <div class="container-fluid">
+                    <div class="card">
+                        <div class="card-header">
+                            <h1 class="card-title">List Department</h1>
+                            <a href="{{url("/departments/add")}}"><button class="btn btn-outline-info" style="float: right">Thêm mới</button></a>
+                        </div>
+                        <div class="card-body table-responsive p-0">
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                <th>Id</th>
+                                <th width="40%">Name</th>
+                                <th>Created At</th>
+                                <th>Updated At</th>
+                                <th width="10%" colspan="2"></th>
+                                </thead>
+                                <tbody>
+                                @foreach ($departments as $item)
+                                    <tr>
+                                        <td>{{$item->id}}</td>
+                                        <td>{{$item->name}}</td>
+                                        <td>{{$item->created_at}}</td>
+                                        <td>{{$item->updated_at}}</td>
+                                        <td class="text-center">
+                                            <a href="{{url("/departments/edit", ["id"=>$item->id])}}" style="color: #17a2b8"><i class="far fa-edit"></i></a>
+                                        </td>
+                                        <td class="text-center">
+                                            <a href="{{url("/departments/delete", ["id"=>$item->id])}}" style="color: #dc3545"><i class="fas fa-trash"></i></a>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-10">
-                    <table style="text-align: center" class="table table-hover table-bordered">
-                        <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Created_at</th>
-                            <th>Updated_at</th>
-                            <th>Action</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        @foreach ($departments  as $cat)
-                            <tr>
-                                <td>{{$cat->__get("id")}}</td>
-                                <td>{{$cat->__get("name")}}</td>
-                                <td>{{$cat->__get("created_at")}}</td>
-                                <td>{{$cat->__get("updated_at")}}</td>
-                                {{--                    <td>{{$cat->__get("class_id")}}</td>--}}
-
-                                <td>
-                                    <a href="{{url("departments/delete",["id"=>$cat->id])}}"><i style="color: red;margin-right: 20px;font-size: 20px" class="far fa-trash-alt"></i></a>
-                                    <a href="{{url("departments/edit",["id"=>$cat->id])}}"><i style="margin-left: 20px;font-size: 20px" class="far fa-edit"></i></a>
-                                </td>
-                            </tr>
-                        @endforeach
-                        </tbody>
-                    </table>
-                </div>
-                <div class="col-md-2" style="text-align: center">
-                    <a style="width: 100px" href="{{url("departments/add")}}" class="btn btn-outline-primary">Add</a>
-                </div>
-            </div>
+            </section>
         </div>
     </div>
 @endsection

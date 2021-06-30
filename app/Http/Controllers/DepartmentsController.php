@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\departments;
+use App\Models\Departments;
 use Illuminate\Http\Request;
 
-class departmentsController extends Controller
+class DepartmentsController extends Controller
 {
     public function list(){
-        $cat = departments::all();
+        $cat = Departments::all();
         return view("departments.home",[
            "departments"=>$cat
         ]);
@@ -25,18 +25,18 @@ class departmentsController extends Controller
             "name.required"=>"Vui lòng nhập tên sản phẩm",
         ]);
         $n =$request->get("name");
-        departments::create([
+        Departments::create([
             "name"=>$n
         ]);
         return redirect()->to("departments");
     }
     public function delete($id){
-        $cat = departments::findOrFail($id);
+        $cat = Departments::findOrFail($id);
         $cat->delete();
         return redirect()->to("departments");
     }
     public function edit($id){
-        $cat = departments::findOrFail($id);
+        $cat = Departments::findOrFail($id);
         return view("departments.edit",[
            "departments"=>$cat
         ]);
@@ -48,13 +48,11 @@ class departmentsController extends Controller
         ],[
             "name.required"=>"Vui lòng nhập tên sản phẩm",
         ]);
-        $cat = departments::findOrFail($id);
+        $cat = Departments::findOrFail($id);
         $cat->update([
             "name"=>$request->get("name")
         ]);
         return redirect()->to("departments");
-
-
     }
 
 
