@@ -43,7 +43,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{url("/leads")}}" class="nav-link">
+                        <a href="{{url("/lead")}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>List Lead</p>
                         </a>
