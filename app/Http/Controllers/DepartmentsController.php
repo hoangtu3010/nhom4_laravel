@@ -18,12 +18,6 @@ class DepartmentsController extends Controller
         ]);
     }
     public function save(Request $request){
-        $request->validate([
-            "name"=>"required",
-
-        ],[
-            "name.required"=>"Vui lòng nhập tên sản phẩm",
-        ]);
         $n =$request->get("name");
         Departments::create([
             "name"=>$n
@@ -42,12 +36,6 @@ class DepartmentsController extends Controller
         ]);
     }
     public function update(Request $request,$id){
-        $request->validate([
-            "name"=>"required",
-
-        ],[
-            "name.required"=>"Vui lòng nhập tên sản phẩm",
-        ]);
         $cat = Departments::findOrFail($id);
         $cat->update([
             "name"=>$request->get("name")
