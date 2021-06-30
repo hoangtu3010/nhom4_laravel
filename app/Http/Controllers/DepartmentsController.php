@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\Departments;
 use Illuminate\Http\Request;
 
+
 class DepartmentsController extends Controller
 {
+
     public function list(){
         $cat = Departments::all();
         return view("departments.department",[

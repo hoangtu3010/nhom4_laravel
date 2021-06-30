@@ -16,6 +16,7 @@ use App\Http\Controllers\LeadController;
 */
 
 Route::get('/', function () {return view('home');});
+Route::get('/calender',[CustomerController::class,"calender"]);
 
 Route::get('/departments',[DepartmentsController::class ,"list"]);
 Route::get('/departments/add',[DepartmentsController::class ,"add"]);

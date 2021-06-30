@@ -8,6 +8,9 @@ use Illuminate\Http\Request;
 
 class CustomerController extends Controller
 {
+    public function calender(){
+        return view("calender");
+    }
     public function list(){
         $ct = Customer::with("Lead")->get();
         return view("customers.customer",[

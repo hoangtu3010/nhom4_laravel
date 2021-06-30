@@ -9,6 +9,8 @@
         href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap"
         rel="stylesheet"
     />
+    <!-- fullCalendar -->
+    <link rel="stylesheet" href="{{ asset("plugins/fullcalendar/main.css") }}">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{ asset("plugins/fontawesome-free/css/all.min.css") }}">
     <!-- Ionicons -->
