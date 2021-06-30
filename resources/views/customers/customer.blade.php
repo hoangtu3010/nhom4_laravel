@@ -22,17 +22,16 @@
                     <div class="card">
                         <div class="card-header">
                             <h1 class="card-title">List Customer</h1>
-                            <a href="{{url("/departments/add")}}"><button class="btn btn-outline-info" style="float: right">Thêm mới</button></a>
+                            <a href="{{url("/customers/add")}}"><button class="btn btn-outline-info" style="float: right">Thêm mới</button></a>
                         </div>
                         <div class="card-body table-responsive p-0">
                             <table class="table table-striped table-hover">
                                 <thead>
                                 <th>Id</th>
                                 <th width="30%">Name</th>
-                                <th>Birthday</th>
                                 <th>Phone</th>
                                 <th>Email</th>
-                                <th>Address</th>
+                                <th>Lead</th>
                                 <th width="10%" colspan="2"></th>
                                 </thead>
                                 <tbody>
@@ -40,10 +39,9 @@
                                     <tr>
                                         <td>{{$item->id}}</td>
                                         <td>{{$item->name}}</td>
-                                        <td>{{$item->birthday}}</td>
                                         <td>{{$item->phone}}</td>
                                         <td>{{$item->email}}</td>
-                                        <td>{{$item->address}}</td>
+                                        <td>{{$item->Lead->__get("name")}}</td>
                                         <td class="text-center">
                                             <a href="{{url("/departments/edit", ["id"=>$item->id])}}" style="color: #17a2b8"><i class="far fa-edit"></i></a>
                                         </td>

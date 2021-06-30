@@ -9,14 +9,16 @@ use Illuminate\Http\Request;
 class CustomerController extends Controller
 {
     public function list(){
-        $ct = Customer::all();
+        $ct = Customer::with("Lead")->get();
         return view("customers.customer",[
             "customers"=>$ct
         ]);
     }
 
     public function add(){
+        $ct = Customer::with("Lead")->get();
         return view("customers.add",[
+            "customers"=>$ct
         ]);
     }
     public function save(Request $request){
