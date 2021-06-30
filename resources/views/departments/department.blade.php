@@ -28,9 +28,9 @@
                             <table class="table table-striped table-hover">
                                 <thead>
                                 <th>Id</th>
-                                <th width="40%">Name</th>
-                                <th>Created At</th>
-                                <th>Updated At</th>
+                                <th width="20%">Name</th>
+                                <th width="40%">Description</th>
+                                <th class="text-center">Updated At</th>
                                 <th width="10%" colspan="2"></th>
                                 </thead>
                                 <tbody>
@@ -38,8 +38,8 @@
                                     <tr>
                                         <td>{{$item->id}}</td>
                                         <td>{{$item->name}}</td>
-                                        <td>{{$item->created_at}}</td>
-                                        <td>{{$item->updated_at}}</td>
+                                        <td>{{$item->__get("description")}}</td>
+                                        <td class="text-center">{{$item->updated_at}}</td>
                                         <td class="text-center">
                                             <a href="{{url("/departments/edit", ["id"=>$item->id])}}" style="color: #17a2b8"><i class="far fa-edit"></i></a>
                                         </td>

@@ -55,7 +55,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-4"style="margin-top: 30px" >
+                                <div class="col-md-4" style="margin-top: 30px" >
                                     <label for="validationCustom04" class="form-label">Email</label>
                                     <input name="email" type="text" class="form-control" id="validationCustom04"
                                            placeholder="email" required>
@@ -86,7 +86,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-12" style="margin-top: 30px">
+                                <div class="col-md-12" style="margin-top: 40px">
                                     <a href="{{url("/lead")}}">
                                         <button class="btn btn-secondary" type="button">Back</button>
                                     </a>

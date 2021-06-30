@@ -39,6 +39,10 @@
                                         Please enter name.
                                     </div>
                                 </div>
+                                <div class="form-group" style="margin: 30px 0 20px 0">
+                                    <label for="validationCustom02" class="form-label">Description</label>
+                                    <textarea name="description" rows="7" class="form-control" id="validationCustom02">{{$departments->description}}</textarea>
+                                </div>
                                 <div class="form-group">
                                     <a href="{{url("/departments")}}">
                                         <button class="btn btn-secondary" type="button">Back</button>

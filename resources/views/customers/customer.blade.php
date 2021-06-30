@@ -43,10 +43,10 @@
                                         <td>{{$item->email}}</td>
                                         <td>{{$item->Lead->__get("name")}}</td>
                                         <td class="text-center">
-                                            <a href="{{url("/departments/edit", ["id"=>$item->id])}}" style="color: #17a2b8"><i class="far fa-edit"></i></a>
+                                            <a href="{{url("/customers/edit", ["id"=>$item->id])}}" style="color: #17a2b8"><i class="far fa-edit"></i></a>
                                         </td>
                                         <td class="text-center">
-                                            <a href="{{url("/departments/delete", ["id"=>$item->id])}}" style="color: #dc3545"><i class="fas fa-trash"></i></a>
+                                            <a href="{{url("/customers/delete", ["id"=>$item->id])}}" style="color: #dc3545"><i class="fas fa-trash"></i></a>
                                         </td>
                                     </tr>
                                 @endforeach

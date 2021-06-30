@@ -14,7 +14,7 @@ class UpdateTableDepartments extends Migration
     public function up()
     {
         Schema::table('departments', function (Blueprint $table) {
-            $table->string("description")->after("name")->nullable();
+            $table->text("description")->after("name")->nullable();
         });
     }
 
