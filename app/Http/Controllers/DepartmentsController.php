@@ -9,12 +9,12 @@ class DepartmentsController extends Controller
 {
     public function list(){
         $cat = Departments::all();
-        return view("departments.home",[
+        return view("departments.department",[
            "departments"=>$cat
         ]);
     }
     public function add(){
-        return view("departments.form",[
+        return view("departments.add",[
         ]);
     }
     public function save(Request $request){

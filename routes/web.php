@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DepartmentsController;
-use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,7 +22,6 @@ Route::get('/departments/delete/{id}',[DepartmentsController::class ,"delete"]);
 Route::get('/departments/edit/{id}',[DepartmentsController::class ,"edit"]);
 Route::post('/departments/update/{id}',[DepartmentsController::class ,"update"]);
 
-Route::get('/product/show',[ProductController::class ,"show"]);
 
 
 
