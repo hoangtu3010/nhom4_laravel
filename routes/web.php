@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DepartmentsController;
+use App\Http\Controllers\LeadController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,6 +30,9 @@ Route::post('/customers/save',[CustomerController::class ,"save"]);
 Route::get('/customers/delete/{id}',[CustomerController::class ,"delete"]);
 Route::get('/customers/edit/{id}',[CustomerController::class ,"edit"]);
 Route::post('/customers/update/{id}',[CustomerController::class ,"update"]);
+
+Route::get('/lead',[LeadController::class ,"list"]);
+
 
 
 
