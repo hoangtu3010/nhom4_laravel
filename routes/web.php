@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\departmentsController;
+use App\Http\Controllers\DepartmentsController;
 use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
@@ -16,12 +16,12 @@ use App\Http\Controllers\ProductController;
 
 Route::get('/', function () {return view('home');});
 
-Route::get('/departments',[departmentsController::class ,"list"]);
-Route::get('/departments/add',[departmentsController::class ,"add"]);
-Route::post('/departments/save',[departmentsController::class ,"save"]);
-Route::get('/departments/delete/{id}',[departmentsController::class ,"delete"]);
-Route::get('/departments/edit/{id}',[departmentsController::class ,"edit"]);
-Route::post('/departments/update/{id}',[departmentsController::class ,"update"]);
+Route::get('/departments',[DepartmentsController::class ,"list"]);
+Route::get('/departments/add',[DepartmentsController::class ,"add"]);
+Route::post('/departments/save',[DepartmentsController::class ,"save"]);
+Route::get('/departments/delete/{id}',[DepartmentsController::class ,"delete"]);
+Route::get('/departments/edit/{id}',[DepartmentsController::class ,"edit"]);
+Route::post('/departments/update/{id}',[DepartmentsController::class ,"update"]);
 
 Route::get('/product/show',[ProductController::class ,"show"]);
 
