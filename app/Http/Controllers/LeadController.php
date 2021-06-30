@@ -15,15 +15,28 @@ class LeadController extends Controller
         ]);
     }
     public function add(){
-        return view("departments.add",[
+        $department = Departments::all();
+        return view("leaders.add",[
+            "departments"=>$department
         ]);
     }
     public function save(Request $request){
         $n =$request->get("name");
-        Departments::create([
-            "name"=>$n
+        $b =$request->get("birthday");
+        $p =$request->get("phone");
+        $e =$request->get("email");
+        $a =$request->get("address");
+        $d =$request->get("department_id");
+        Lead::create([
+            "name"=>$n,
+            "birthday"=>$b,
+            "phone"=>$p,
+            "email"=>$e,
+            "address"=>$a,
+            "department_id"=>$d,
         ]);
-        return redirect()->to("departments");
+
+        return redirect()->to("lead");
     }
     public function delete($id){
         $cat = Departments::findOrFail($id);

@@ -33,7 +33,11 @@ Route::get('/customers/edit/{id}',[CustomerController::class ,"edit"]);
 Route::post('/customers/update/{id}',[CustomerController::class ,"update"]);
 
 Route::get('/lead',[LeadController::class ,"list"]);
-
+Route::get('/lead/add',[LeadController::class ,"add"]);
+Route::post('/lead/save',[LeadController::class ,"save"]);
+Route::get('/lead/delete/{id}',[LeadController::class ,"delete"]);
+Route::get('/lead/edit/{id}',[LeadController::class ,"edit"]);
+Route::post('/lead/update/{id}',[LeadController::class ,"update"]);
 
 
 
