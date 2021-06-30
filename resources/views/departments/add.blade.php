@@ -1,6 +1,5 @@
 @extends("layout")
 @section("main")
-
     <div class="content-wrapper">
         <div class="container-header">
             <section class="content-header">
@@ -27,18 +26,24 @@
                             <h3 class="card-title">Add</h3>
                         </div>
                         <div class="card-body">
-                            <form action="{{url("/departments/save")}}" method="post" class="needs-validation" novalidate>
+                            <form action="{{url("/departments/save")}}" method="post" class="needs-validation"
+                                  novalidate>
                                 @csrf
                                 <div class="form-group" style="margin-bottom: 30px">
                                     <label for="validationCustom01" class="form-label">Name</label>
-                                    <input name="name" type="text" class="form-control" id="validationCustom01" placeholder="Name" required>
+                                    <input name="name" type="text" class="form-control" id="validationCustom01"
+                                           placeholder="Name" required>
                                     <div class="invalid-feedback">
                                         Please enter name.
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <a href="{{url("/departments")}}"><button class="btn btn-secondary" type="button">Back</button></a>
-                                    <button class="btn btn-outline-success" type="submit" style="float: right">Thêm mới</button>
+                                    <a href="{{url("/departments")}}">
+                                        <button class="btn btn-secondary" type="button">Back</button>
+                                    </a>
+                                    <button class="btn btn-outline-success" type="submit" style="float: right">Thêm
+                                        mới
+                                    </button>
                                 </div>
                             </form>
                         </div>
