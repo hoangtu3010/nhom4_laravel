@@ -6,7 +6,7 @@
             <img src="{{asset("dist/img/user2-160x160.jpg")}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-            <a href="#" class="d-block">Alexander Pierce</a>
+            <a href="#" class="d-block">{{Auth::user()->name}}</a>
         </div>
     </div>
 
@@ -37,19 +37,19 @@
                 </a>
                 <ul class="nav nav-treeview">
                     <li class="nav-item">
-                        <a href="{{url("/customers")}}" class="nav-link">
+                        <a href="{{url("/admin/customers")}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>List Customer</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{url("/lead")}}" class="nav-link">
+                        <a href="{{url("/admin/lead")}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>List Lead</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="{{url("/departments")}}" class="nav-link">
+                        <a href="{{url("/admin/departments")}}" class="nav-link">
                             <i class="far fa-circle nav-icon"></i>
                             <p>List Department</p>
                         </a>
@@ -93,7 +93,7 @@
             </li>
             <li class="nav-header">EXAMPLES</li>
             <li class="nav-item">
-                <a href="{{url("/calender")}}" class="nav-link">
+                <a href="{{url("/admin/calender")}}" class="nav-link">
                     <i class="nav-icon far fa-calendar-alt"></i>
                     <p>
                         Calendar

@@ -3,16 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Customer;
-use App\Models\Departments;
 use App\Models\Lead;
 use Illuminate\Http\Request;
 
 class CustomerController extends Controller
 {
-    public function calender()
-    {
-        return view("calender");
-    }
 
     public function list()
     {

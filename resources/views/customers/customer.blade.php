@@ -10,7 +10,7 @@
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                <li class="breadcrumb-item"><a href="{{url("/admin")}}">Home</a></li>
                                 <li class="breadcrumb-item active">List Customer</li>
                             </ol>
                         </div>
@@ -22,7 +22,7 @@
                     <div class="card">
                         <div class="card-header">
                             <h1 class="card-title">List Customer</h1>
-                            <a href="{{url("/customers/add")}}"><button class="btn btn-outline-info" style="float: right">Thêm mới</button></a>
+                            <a href="{{url("/admin/customers/add")}}"><button class="btn btn-outline-info" style="float: right">Thêm mới</button></a>
                         </div>
                         <div class="card-body table-responsive p-0">
                             <table class="table table-striped table-hover">
@@ -43,10 +43,10 @@
                                         <td>{{$item->email}}</td>
                                         <td>{{$item->Lead->__get("name")}}</td>
                                         <td class="text-center">
-                                            <a href="{{url("/customers/edit", ["id"=>$item->id])}}" style="color: #17a2b8"><i class="far fa-edit"></i></a>
+                                            <a href="{{url("/admin/customers/edit", ["id"=>$item->id])}}" style="color: #17a2b8"><i class="far fa-edit"></i></a>
                                         </td>
                                         <td class="text-center">
-                                            <a href="{{url("/customers/delete", ["id"=>$item->id])}}" style="color: #dc3545"><i class="fas fa-trash"></i></a>
+                                            <a href="{{url("/admin/customers/delete", ["id"=>$item->id])}}" style="color: #dc3545"><i class="fas fa-trash"></i></a>
                                         </td>
                                     </tr>
                                 @endforeach

@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,9 +14,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call([
-           LeadSeeder::class,
-           CustomerSeeder::class
+//        $this->call([
+//           LeadSeeder::class,
+//           CustomerSeeder::class
+//        ]);
+        DB::table("admins")->insert([
+            "name"=>"Administrator",
+            "email"=>"admin@gmail.com",
+            "password"=>bcrypt("12345678")
         ]);
     }
 }

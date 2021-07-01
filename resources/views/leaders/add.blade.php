@@ -10,8 +10,8 @@
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item"><a href="{{url("/lead")}}">List Lead</a></li>
+                                <li class="breadcrumb-item"><a href="{{url("/admin")}}">Home</a></li>
+                                <li class="breadcrumb-item"><a href="{{url("/admin/lead")}}">List Lead</a></li>
                                 <li class="breadcrumb-item active">Add Lead</li>
                             </ol>
                         </div>
@@ -26,7 +26,7 @@
                             <h3 class="card-title">Add</h3>
                         </div>
                         <div class="card-body">
-                            <form action="{{url("/lead/save")}}" method="post" class="row needs-validation"
+                            <form action="{{url("/admin/lead/save")}}" method="post" class="row needs-validation"
                                   novalidate>
                                 @csrf
 
@@ -87,7 +87,7 @@
                                 </div>
 
                                 <div class="col-md-12" style="margin-top: 40px">
-                                    <a href="{{url("/lead")}}">
+                                    <a href="{{url("/admin/lead")}}">
                                         <button class="btn btn-secondary" type="button">Back</button>
                                     </a>
                                     <button class="btn btn-outline-success" type="submit" style="float: right">Thêm

@@ -9,8 +9,8 @@
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item"><a href="{{url("/")}}">Home</a></li>
-                            <li class="breadcrumb-item"><a href="{{url("/customers/customer")}}">List Customer</a></li>
+                            <li class="breadcrumb-item"><a href="{{url("/admin")}}">Home</a></li>
+                            <li class="breadcrumb-item"><a href="{{url("/admin/customers/customer")}}">List Customer</a></li>
                             <li class="breadcrumb-item active">Edit Customer</li>
                         </ol>
                     </div>
@@ -24,7 +24,7 @@
                         <h3 class="card-title">Edit</h3>
                     </div>
                     <div class="card-body">
-                        <form class="row needs-validation" action="{{url("/customers/update", ["id" => $customers->id])}}" method="post" novalidate>
+                        <form class="row needs-validation" action="{{url("/admin/customers/update", ["id" => $customers->id])}}" method="post" novalidate>
                             @csrf
                             <div class="col-md-4">
                                 <label for="validationCustom01" class="form-label">Name</label>
@@ -74,7 +74,7 @@
                                 </div>
                             </div>
                             <div class="col-12" style="margin-top: 40px">
-                                <a href="{{url("/customers")}}"><button class="btn btn-secondary" type="button">Back</button></a>
+                                <a href="{{url("/admin/customers")}}"><button class="btn btn-secondary" type="button">Back</button></a>
                                 <button class="btn btn-outline-success" type="submit" style="float: right">Lưu</button>
                             </div>
                         </form>

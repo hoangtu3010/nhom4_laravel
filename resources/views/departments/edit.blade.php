@@ -10,8 +10,8 @@
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                                <li class="breadcrumb-item"><a href="{{url("/")}}">Home</a></li>
-                                <li class="breadcrumb-item"><a href="{{url("/departments")}}">List Department</a></li>
+                                <li class="breadcrumb-item"><a href="{{url("/admin")}}">Home</a></li>
+                                <li class="breadcrumb-item"><a href="{{url("/admin/departments")}}">List Department</a></li>
                                 <li class="breadcrumb-item active">Edit Department</li>
                             </ol>
                         </div>
@@ -26,7 +26,7 @@
                             <h3 class="card-title">Edit</h3>
                         </div>
                         <div class="card-body">
-                            <form action="{{url("/departments/update", ["id"=>$departments->id])}}" method="post"
+                            <form action="{{url("/admin/departments/update", ["id"=>$departments->id])}}" method="post"
                                   class="needs-validation"
                                   novalidate>
                                 @csrf
@@ -44,7 +44,7 @@
                                     <textarea name="description" rows="7" class="form-control" id="validationCustom02">{{$departments->description}}</textarea>
                                 </div>
                                 <div class="form-group">
-                                    <a href="{{url("/departments")}}">
+                                    <a href="{{url("/admin/departments")}}">
                                         <button class="btn btn-secondary" type="button">Back</button>
                                     </a>
                                     <button class="btn btn-outline-success" type="submit" style="float: right">

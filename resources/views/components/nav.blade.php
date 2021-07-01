@@ -6,10 +6,16 @@
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="#" class="nav-link">Home</a>
+            <a href="{{url("/admin")}}" class="nav-link">Home</a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="{{url("/departments")}}" class="nav-link">List Department</a>
+            <a href="{{url("/admin/customers")}}" class="nav-link">List Customer</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="{{url("/admin/lead")}}" class="nav-link">List Lead</a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+            <a href="{{url("/admin/departments")}}" class="nav-link">List Department</a>
         </li>
     </ul>
 
