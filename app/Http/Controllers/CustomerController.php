@@ -8,12 +8,13 @@ use Illuminate\Http\Request;
 
 class CustomerController extends Controller
 {
-
     public function list()
     {
+        $ez="menu-open";
         $ct = Customer::with("Lead")->get();
         return view("customers.customer", [
-            "customers" => $ct
+            "customers" => $ct,
+            "table"=>$ez
         ]);
     }
 
