@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DepartmentsController;
 use App\Http\Controllers\LeadController;
-use App\Http\Controllers\Admin\Auth\LoginController;
 
 //Route::match(["get", "post"], "login", [LoginController::class, "login"])->name("login");
 

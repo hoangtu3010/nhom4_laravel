@@ -30,14 +30,14 @@ class DepartmentsController extends Controller
             "name" => $n,
             "description" => $d
         ]);
-        return redirect()->to("departments");
+        return redirect()->to("/admin/departments");
     }
 
     public function delete($id)
     {
         $cat = Departments::findOrFail($id);
         $cat->delete();
-        return redirect()->to("departments");
+        return redirect()->to("/admin/departments");
     }
 
     public function edit($id)
@@ -55,7 +55,7 @@ class DepartmentsController extends Controller
             "name" => $request->get("name"),
             "description" => $request->get("description")
         ]);
-        return redirect()->to("departments");
+        return redirect()->to("/admin/departments");
     }
 
 
