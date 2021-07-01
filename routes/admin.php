@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DepartmentsController;
 use App\Http\Controllers\LeadController;
+use App\Models\Customer;
+use App\Models\Departments;
+use App\Models\Lead;
 
 //Route::match(["get", "post"], "login", [LoginController::class, "login"])->name("login");
 
@@ -11,7 +14,14 @@ Route::middleware("auth:admin")->group(function (){
 
     Route::middleware("admin")->group(function (){
         Route::get('/', function () {
-            return view('home');
+            $c = Customer::all()->count();
+            $d = Departments::all()->count();
+            $l = Lead::all()->count();
+            return view('home', [
+                "customers" => $c,
+                "departments" => $d,
+                "leads" => $l
+            ]);
         });
         Route::get('/calender', function () {
             return view("calender");

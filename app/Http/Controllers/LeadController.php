@@ -41,14 +41,14 @@ class LeadController extends Controller
             "department_id" => $d,
         ]);
 
-        return redirect()->to("lead");
+        return redirect()->to("/admin/lead");
     }
 
     public function delete($id)
     {
         $l = Lead::findOrFail($id);
         $l->delete();
-        return redirect()->to("lead");
+        return redirect()->to("/admin/lead");
     }
 
     public function edit($id)
@@ -72,7 +72,7 @@ class LeadController extends Controller
             "address" => $request->get("address"),
             "department_id" => $request->get("department_id")
         ]);
-        return redirect()->to("lead");
+        return redirect()->to("/admin/lead");
     }
 
 }

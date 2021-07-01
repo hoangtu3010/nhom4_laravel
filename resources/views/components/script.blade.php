@@ -8,6 +8,9 @@
 </script>
 <!-- Bootstrap 4 -->
 <script src="{{ asset("plugins/bootstrap/js/bootstrap.bundle.min.js") }}"></script>
+<!-- Ion Icons -->
+<script type="module" src="{{ asset("https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js") }}"></script>
+<script nomodule src="{{ asset("https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js") }}"></script>
 <!-- ChartJS -->
 <script src="{{ asset("plugins/chart.js/Chart.min.js") }}"></script>
 <!-- Sparkline -->

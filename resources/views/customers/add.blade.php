@@ -19,7 +19,7 @@
         </section>
         <section class="content">
             <div class="container-fluid">
-                <div class="card">
+                <div class="card card-success">
                     <div class="card-header">
                         <h3 class="card-title">Add</h3>
                     </div>

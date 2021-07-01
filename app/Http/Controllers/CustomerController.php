@@ -44,14 +44,14 @@ class CustomerController extends Controller
             "address" => $a,
             "lead_id" => $l
         ]);
-        return redirect()->to("customers");
+        return redirect()->to("/admin/customers");
     }
 
     public function delete($id)
     {
         $cat = Customer::findOrFail($id);
         $cat->delete();
-        return redirect()->to("customers");
+        return redirect()->to("/admin/customers");
     }
 
     public function edit($id)
@@ -75,6 +75,6 @@ class CustomerController extends Controller
             "address" => $request->get("address"),
             "lead_id" => $request->get("lead_id"),
         ]);
-        return redirect()->to("customers");
+        return redirect()->to("/admin/customers");
     }
 }

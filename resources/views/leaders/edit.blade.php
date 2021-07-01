@@ -21,7 +21,7 @@
 
             <section class="content">
                 <div class="container-fluid">
-                    <div class="card">
+                    <div class="card card-info">
                         <div class="card-header">
                             <h3 class="card-title">Edit</h3>
                         </div>
@@ -90,7 +90,7 @@
                                     <a href="{{url("/admin/lead")}}">
                                         <button class="btn btn-secondary" type="button">Back</button>
                                     </a>
-                                    <button class="btn btn-outline-success" type="submit" style="float: right">Lưu
+                                    <button class="btn btn-outline-info" type="submit" style="float: right">Lưu
                                     </button>
                                 </div>
                             </form>
