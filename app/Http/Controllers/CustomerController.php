@@ -24,7 +24,9 @@ class CustomerController extends Controller
 
     public function add()
     {
-        $ct = Customer::with("Lead")->get();
+//        $ct = Customer::with("Lead")->get();
+
+        $ct = Lead::all();
         return view("customers.add", [
             "customers" => $ct
         ]);
