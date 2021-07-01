@@ -14,4 +14,4 @@ yarn-error.log
 /.idea
 /.vscodez
 /public/plugins/
-/public/dist/
+#/public/dist/
