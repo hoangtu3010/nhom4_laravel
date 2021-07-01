@@ -15,6 +15,10 @@ use App\Http\Controllers\User\Auth\LoginController;
 
 Route::match(["get", "post"], "login", [LoginController::class, "login"])->name("login");
 
+Route::get('/', function () {
+    return redirect()->to("/admin");
+});
+
 Route::middleware('auth')->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
