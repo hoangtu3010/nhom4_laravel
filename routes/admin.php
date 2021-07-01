@@ -23,9 +23,15 @@ Route::middleware("auth:admin")->group(function (){
                 "leads" => $l
             ]);
         });
+
         Route::get('/calender', function () {
             return view("calender");
         });
+
+    });
+
+    Route::get('/profile', function (){
+        return view("profile.show");
     });
 
     Route::get('/departments', [DepartmentsController::class, "list"]);
