@@ -71,7 +71,7 @@ return [
             'database' => 'd810hsd7l7vnhp',
             'username' => 'wcabqkrthsrwiu',
             'password' => '5cf86a121774f86cbde14357759e540fc8184c4456f33b686b5b19e6a94ef49b',
-            'charset' => 'utf8',
+            'charset' => 'utf8mb4',
             'prefix' => '',
             'prefix_indexes' => true,
             'schema' => 'public',
